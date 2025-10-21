@@ -25,7 +25,7 @@ export function buildTabularModel(schema) {
   x = tf.layers.dropout({rate:0.15}).apply(x);
   x = tf.layers.dense({units: 128, activation:'relu'}).apply(x);
   x = tf.layers.batchNormalization().apply(x);
-  x = tf.layers.dropout({rate:0.15}).apply(x);
+  x = tf.layers.dropout({rate:0.0}).apply(x);
   x = tf.layers.dense({units: 64, activation:'relu'}).apply(x);
   const out = tf.layers.dense({units:1, activation:'linear'}).apply(x);
 
